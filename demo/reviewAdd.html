@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Harley Business</title>
+
+    <meta name="description" content="WEB222 Wildlife Assignment" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon from https://www.favicon.cc/?action=icon&file_id=716323 -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZMDGCmTAzQpkwMZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkwMJqZMDGKmTAzspkwM/6ZMDPmmTAwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmTAxMpkwMz6ZMDPimTAz6pkwM/6ZMDP+mTAz/pkwMHKZMDBymTAwUAAAAAAAAAAAAAAAAAAAAAAAAAACmTAyQpkwM/aZMDP+mTAz/pkwM/6ZMDP+mTAz/pkwM/KZMDDSmTAzlpkwM/6ZMDL2mTAwLAAAAAAAAAAAAAAAApkwMiKZMDP+mTAz/pkwM/6ZMDP+mTAz/pkwM/6ZMDNumTAwhpkwM/qZMDP+mTAz/pkwMigAAAAAAAAAAAAAAAKZMDASmTAyOpkwM/6ZMDP+mTAz/pkwM/6ZMDP+mTAyLpkwMAaZMDKSmTAz/pkwM/6ZMDLYAAAAAAAAAAAAAAAAAAAAAAAAAAKZMDDSmTAyvpkwM4aZMDOymTAzdpkwMQKZMDAOmTAwJpkwMPqZMDHqmTAwgAAAAAAAAAAAAAAAAAAAAAKZMDEemTAzJpkwMUKZMDBWmTAwjpkwMFgAAAACmTAxjpkwM0KZMDJCmTAwHAAAAAAAAAAAAAAAAAAAAAAAAAACmTAympkwM/6ZMDPOmTAwKpkwMI6ZMDDYAAAAApkwMw6ZMDP+mTAz/pkwMuaZMDAIAAAAAAAAAAAAAAAAAAAAApkwM1KZMDP+mTAz/pkwMHaZMDJemTAz2pkwMiqZMDFymTAz/pkwM/6ZMDP+mTAxQAAAAAAAAAAAAAAAAAAAAAKZMDKmmTAz/pkwM3KZMDBOmTAzFpkwM/6ZMDP2mTAwnpkwMn6ZMDP6mTAz/pkwMbwAAAAAAAAAAAAAAAAAAAACmTAwepkwMyqZMDH6mTAwCpkwMtaZMDP+mTAz/pkwMgwAAAACmTAwmpkwMUqZMDAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZMDE2mTAz/pkwM/6ZMDG8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmTAwBpkwMeKZMDLGmTAwFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP9/AAD+PwAA8D8AAMAjAADAIQAA4CEAAPh/AAD35wAA48MAAOIjAADiIwAA9h8AAP8/AAD/vwAA//8AAA=="
+        rel="icon" type="image/x-icon" />
+
+    <!-- Normalize CSS across browsers -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
+
+    <!-- Water CSS theme, see https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form.css">
+
+</head>
+
+  <body>
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        </nav>
+
+        <h1>Harley Business Reviews</h1>
+
+        <p>Our clients giving their opinion. </p>
+    </header>
+    <main>
+      <section>
+          <h2>Enter The Comment Below:</h2>
+          <p><span class="required">*</span> Required field</p>
+          <form id="addBirdForm" onsubmit="validate(event)">
+            <div class="form-group">
+              <label for="heading">Heading <span class="required">*</span>:</label>
+              <input type="text" class="form-control" placeholder="Enter The Heading " id="heading" name="heading" />
+          </div>
+              <div class="form-group">
+                  <label for="name">Name <span class="required">*</span>:</label>
+                  <input type="text" class="form-control" placeholder="Enter Your Name" id="name" name="name" />
+              </div>
+              <div class="form-group">
+                <label for="detail">Comment <span class="required">*</span>:</label>
+                <textarea class="form-control" id="detail" placeholder="Enter The Comment" name="detail"></textarea>
+            </div>
+
+              <div class="form-group">
+                  <button id="btn" class="btn" type="submit">Submit</button>
+              </div>
+
+              <div id="msg">
+                <pre></pre>
+              </div>
+
+          </form>
+      </section>
+  </main>
+  </body>
